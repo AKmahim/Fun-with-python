@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bird</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="public/js/main.js"></script>
+</head>
+<body>
+    <audio type="audio/mpeg" src="audio/bg_sound.mp3" autoplay loop>Browser doesn't support this audio file</audio>
+    <audio type="audio/mpeg" src="audio/sfx_die.mp3" id="death-sound">Browser doesn't support this audio file</audio>
+    <div id="canvas" style="height: inherit; position: relative; overflow: hidden">
+        <div style="position: absolute; font-family: monospace">
+            <h2 style="color: #c95a5a">SCORE:&nbsp;<span id="game-score">0</span></h2>
+        </div>
+        <div style="position: absolute; font-family: monospace; right: 0; top: 0">
+            <h2 style="color: #c95a5a">BULLET LEFT:&nbsp;<span id="bullet-limit">0</span></h2>
+        </div>
+        <div style="position: absolute; font-family: monospace; right: 0; top: 30px">
+            <h2 style="color: #c95a5a">TIME:&nbsp;<span id="time-limit">0:00</span></h2>
+        </div>
+        <div style="position: absolute; right: 480px; top: 200px; width: 400px; height: 80px">
+            <button type="button" id="start-game-btn" style="display: block; width: inherit; height: inherit; font-size: 30px" onclick="startGame()">Start Play</button>
+            <h1 id="game-end-score-board" style="display: none; color: #c95a5a; text-align: center">YOUR SCORE:&nbsp;<span id="game-end-score"></span></h1>
+        </div> 
+    	<div style="bottom: 0; position: absolute">
+    		<img src="images/grass.png" width="489px" height="225px">
+    	</div>
+    	<div style="bottom: 0; left: 485px; position: absolute">
+    		<img src="images/grass.png" width="489px" height="225px">
+    	</div>
+    	<div style="bottom: 0; left: 970px; position: absolute">
+    		<img src="images/grass.png" width="489px" height="225px">
+    	</div>
+    	<div style="bottom: 0; left: 1050px; position: absolute">
+    		<img src="images/grass.png" width="489px" height="225px">
+    	</div>
+    </div>
+</body>
+</html>
+
+

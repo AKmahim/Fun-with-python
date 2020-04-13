@@ -3,6 +3,7 @@
 import re
 import requests
 import sys
+from twilio.rest import Client
 
 
 def find_case(url):
@@ -16,7 +17,7 @@ def find_case(url):
         DC = re.findall(death_pat,content)
         RC = re.findall(recover_pat,content)
         
-    return WC[0],DC[0],RC[0]
+        return WC[0],DC[0],RC[0]
 
 
 
@@ -34,8 +35,12 @@ if __name__ == "__main__":
     tc2,dc2,rc2 = find_case(bd_url)
 
     res1 = "World Case---\nCoronavirus Cases: {}\nDeaths: {}\nRecovered: {}\n".format(tc1,dc1,rc1)
-    res2 = "Bangladesh Case--\nCoronavirus Cases: {}\nDeaths: {}\nRecovered: {}".format(tc2,dc2,rc2)
-    print(res1) #world case
-    print(res2) #bangladesh case
-
-
+    res2 = "Bangladesh Case--\nCoronavirus Cases: {}\nDeaths: {}\nRecovered: {}\n".format(tc2,dc2,rc2)
+    #print(res1) #world case
+    #print(res2) #bangladesh case
+    whatapp_mess = res1 + res2
+    ac_sid = "ACfb554f4b5d8f847c156f03a78da2751c"
+    auth_token ="852d3df24fa063ee6c3f15b93211c912"
+    client = Client(ac_sid,auth_token)
+    message = client.messages.create(body=whatapp_mess,from_='whatsapp:+14155238886',to='whatsapp:+8801635227460')
+    print("Data send")
