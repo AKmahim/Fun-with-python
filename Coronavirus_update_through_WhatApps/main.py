@@ -39,8 +39,8 @@ if __name__ == "__main__":
     #print(res1) #world case
     #print(res2) #bangladesh case
     whatapp_mess = res1 + res2
-    ac_sid = "ACfb554f4b5d8f847c156f03a78da2751c"
-    auth_token ="852d3df24fa063ee6c3f15b93211c912"
+    ac_sid = "account token"
+    auth_token ="auth_token"
     client = Client(ac_sid,auth_token)
-    message = client.messages.create(body=whatapp_mess,from_='whatsapp:+14155238886',to='whatsapp:+8801635227460')
+    message = client.messages.create(body=whatapp_mess,from_='whatsapp:twilio',to='whatsapp:your_number')
     print("Data send")
