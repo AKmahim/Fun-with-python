@@ -1,0 +1,38 @@
+[
+    {
+        "product_name": "Xiaomi Redmi A2+",
+        "product_image": "https://www.mobiledokan.com/wp-content/uploads/2023/10/Xiaomi-Redmi-A2-plus-black-300x254.webp",
+        "brand": "Xiaomi",
+        "types": "Android Phone",
+        "price": "৳10,999",
+        "short_description": "4GB RAM 6inch display 5000mAh battery",
+        "rating": "4"
+    },
+    {
+        "product_name": "Xiaomi 13 Lite",
+        "product_image": "https://www.mobiledokan.com/wp-content/uploads/2023/09/Xiaomi-13-Lite-300x254.jpg.webp",
+        "brand": "Xiaomi",
+        "types": "Android Phone",
+        "price": "৳49,999",
+        "short_description": "8GB RAM 6inch display 5000mAh battery",
+        "rating": "5"
+    },
+    {
+        "product_name": "Xiaomi Redmi Note 12 Pro 5G",
+        "product_image": "https://www.mobiledokan.com/wp-content/uploads/2023/09/Xiaomi-Redmi-Note-12-Pro-5G-300x254.jpg.webp",
+        "brand": "Xiaomi",
+        "types": "Android Phone",
+        "price": "৳37,999",
+        "short_description": "8GB RAM 6inch display 5000mAh battery",
+        "rating": "5"
+    },
+    {
+        "product_name": "Xiaomi Redmi Note 12",
+        "product_image": "https://www.mobiledokan.com/wp-content/uploads/2023/09/Xiaomi-Redmi-Note-12-black-new-300x254.webp",
+        "brand": "Xiaomi",
+        "types": "Android Phone",
+        "price": "৳24,999 8/256 GB",
+        "short_description": "8GB RAM 6inch display 5000mAh battery",
+        "rating": "5"
+    }
+]
