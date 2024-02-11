@@ -3,8 +3,13 @@ import requests
 import json
 import datetime
 import csv
+import os
+from dotenv import load_dotenv
 
-TOKEN = 'MTExODQxNDk4NTgxNTY3MDc5NQ.GsTbCm.QEZoQXPKdit8nSCJr4UB0b7dUldOxd8R4b36aA'
+load_dotenv()
+
+TOKEN = os.getenv('TOKEN1')
+print(TOKEN)
 CHANNEL_ID = '1126873503354859711'
 
 # your API Key goes here (see README.md on how to find out your own api key)
@@ -36,13 +41,13 @@ def save_messages_to_csv(output_data, csv_filename):
                 writer.writerow([content, author_username, message_date])
 
 
-messages = get_message_from_channel(CHANNEL_ID,authorID,before,after)
+# messages = get_message_from_channel(CHANNEL_ID,authorID,before,after)
 
 
-# print(messages)
-csv_filename = "discord_messages.csv"
-save_messages_to_csv(messages, csv_filename)
-print("Data saved to", csv_filename)
+# # print(messages)
+# csv_filename = "discord_messages.csv"
+# save_messages_to_csv(messages, csv_filename)
+# print("Data saved to", csv_filename)
 
 
 

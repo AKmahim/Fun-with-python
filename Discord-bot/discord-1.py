@@ -32,9 +32,13 @@ from datetime import datetime
 
 import discord
 from datetime import datetime
+from dotenv import load_dotenv
+import os 
+
+load_dotenv()
 
 # Discord bot token
-TOKEN = 'MTIwNTc4NjM4MDI0MDgxODE4Ng.GANQFN.Pf2IKCxzJVtaz_9uU1rnBu5gH5ngmzRfs3QZP8' 
+TOKEN = TOKEN = os.getenv('TOKEN2')
 
 
 
@@ -47,8 +51,7 @@ CHANNEL_ID = 1126873503354859711
 start_date = datetime(2024, 1, 9)  # YYYY, MM, DD
 end_date = datetime(2024, 1, 10)   # YYYY, MM, DD
 
-# Define intents
-intents = discord.Intents.default()
+# Define intentsintents = discord.Intents.default()
 intents.messages = True
 
 # Initialize Discord client with intents
