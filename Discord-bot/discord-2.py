@@ -41,22 +41,3 @@ def save_messages_to_csv(output_data, csv_filename):
                 writer.writerow([content, author_username, message_date])
 
 
-# messages = get_message_from_channel(CHANNEL_ID,authorID,before,after)
-
-
-# # print(messages)
-# csv_filename = "discord_messages.csv"
-# save_messages_to_csv(messages, csv_filename)
-# print("Data saved to", csv_filename)
-
-
-
-
-# for messages_list in messages:
-#     for message in messages_list:
-#         content = message['content']
-#         author_username = message['author']['username']
-#         message_date = datetime.datetime.strptime(message['timestamp'], "%Y-%m-%dT%H:%M:%S.%f+00:00")
-#         print("Content:", content)
-#         print("Author Username:", author_username)
-#         print("Message Date:", message_date)
