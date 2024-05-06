@@ -3,7 +3,7 @@ import requests
 import time
 
 # Read the Excel file into a pandas DataFrame
-excel_file = "BP.xlsx"
+excel_file = "BP-2.xlsx"
 df = pd.read_excel(excel_file)
 
 # API endpoint
@@ -17,7 +17,7 @@ time_interval = 60 / users_per_minute
 for index, row in df.iterrows():
     # Extract data from the current row
     name = row['Name']
-    print(name)
+    # print(name)
     phone_number = str(row['Phone'])  # Convert to string if needed
     bp_id = row['bp_id']
     password = row['password']
@@ -45,7 +45,7 @@ for index, row in df.iterrows():
         print(f"User {name}, {bp_id} created successfully.")
     else:
         print(f"Failed to create user {name},{bp_id}. Status code: {response.status_code}")
-        print(f"error: {response.error}")
+        # print(f"error: {response.error}")
 
     # Rate limiting: wait for the specified time interval before proceeding to the next iteration
     time.sleep(time_interval)
