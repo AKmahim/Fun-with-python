@@ -30,7 +30,7 @@ df = pd.read_excel(file_path)
 duplicated_phones = df[df.duplicated(subset=['Phone'], keep=False)]
 
 # Further filter the rows where 'Interested To Buy' is 'yes'
-filtered_duplicated_phones = duplicated_phones[duplicated_phones['Interested To Buy'].str.lower() == 'yes']
+filtered_duplicated_phones = duplicated_phones[duplicated_phones['Interested To Buy'].str.lower() == 'no']
 
 # Extract the relevant information
 output_df = filtered_duplicated_phones[['BP ID', 'BP Name', 'Customer Name', 'Phone', 'Interested To Buy', 'Date', 'Time']]
