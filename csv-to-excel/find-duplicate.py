@@ -23,17 +23,18 @@
 import pandas as pd
 
 # Load the Excel file
-file_path = 'customers.xlsx'
+file_path = 'customers2.xlsx'
 df = pd.read_excel(file_path)
 
 # Identify duplicated phone numbers
 duplicated_phones = df[df.duplicated(subset=['Phone'], keep=False)]
 
 # Further filter the rows where 'Interested To Buy' is 'yes'
-filtered_duplicated_phones = duplicated_phones[duplicated_phones['Interested To Buy'].str.lower() == 'no']
+# filtered_duplicated_phones = duplicated_phones[(duplicated_phones['Interested To Buy'].str.lower() == 'no') & (duplicated_phones['BP ID'] == 'JAT083')]
+filtered_duplicated_phones = duplicated_phones[(duplicated_phones['Interested To Buy'].str.lower() == 'no')]
 
 # Extract the relevant information
-output_df = filtered_duplicated_phones[['BP ID', 'BP Name', 'Customer Name', 'Phone', 'Interested To Buy', 'Date', 'Time']]
+output_df = filtered_duplicated_phones[['BP ID', 'BP Name', 'Customer Name', 'Phone', 'Interested To Buy', 'Date ', 'Time']]
 
 # Save to a new CSV file
 output_csv_path = 'duplicated.csv'
