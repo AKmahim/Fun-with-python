@@ -152,7 +152,7 @@ excel_file = "BP-2.xlsx"
 df = pd.read_excel(excel_file)
 
 # API endpoint
-api_url = "https://expactivation.app/api/v6/login"
+api_url = ""
 
 # Rate limiting parameters
 users_per_minute = 100
