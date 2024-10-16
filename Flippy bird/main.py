@@ -1,7 +1,7 @@
 import pygame
 import random #using to create random number
 import sys
-import pygame.locals import * #pygame normal input
+import pygame.locals import * 
 
 #some global variables
 FPS = 32
